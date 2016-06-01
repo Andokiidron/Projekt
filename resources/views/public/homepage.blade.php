@@ -7,7 +7,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<h1>{{Lang::get('app.home_slogan')}}</h1>
+					<h1>Esita korteriühistu näidud elektroonselt!</h1>
 					<p style="color:white;font-size:20px;">{{Lang::get('app.home_slogan_sub')}}</p>
 					<form class="form-inline" role="form" action="{{URL::to('search')}}" method="POST">
 						<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
