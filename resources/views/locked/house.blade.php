@@ -8,45 +8,30 @@
 	<div class="row">
 		<div class="col-md-3">
 			<div class="panel panel-default">
-				<div class="panel-heading">{{Lang::get('app.house_add_apartment_headline')}}</div>
+				<div class="panel-heading">Lisa uus korter</div>
 				<div class="panel-body">
 					<form action='{{URL::to("house/$house->id/apartment")}}' method="POST" class="form">
 						<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 						<div class="form-group">
-							<label for="exampleInputEmail1">{{Lang::get('app.house_add_apartmemt_number')}}</label>
-							<input type="text" name="apartment_number" class="form-control" placeholder="{{Lang::get('app.house_add_apartmemt_number')}}">
+							<label for="exampleInputEmail1">Korteri number</label>
+							<input type="text" name="apartment_number" class="form-control" placeholder="Korteri number">
 						</div>
-						<button type="submit" class="btn btn-success">{{Lang::get('app.house_add_apartment_btn')}}</button>
+						<button type="submit" class="btn btn-success">Loo uus korter</button>
 					</form>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="col-md-9">
-
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					{{Lang::get('app.house_apartments_headline')}}
+					Lisa uus korter
 				</div>
-
 				<div class="panel-body">
-
 					<table class="table">
 		               <thead>
 		             		<tr>
-		                       <th>{{Lang::get('app.house_apartments_number')}}</th>
-		                       <th>{{Lang::get('app.house_apartments_token')}}</th>
+		                       <th>Number</th>
+		                       <th>Kood</th>
 		                       <th>Külm vesi</th>
 		                       <th>Soe vesi</th>
 		                       <th>Gaas</th>
@@ -69,7 +54,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 @endsection

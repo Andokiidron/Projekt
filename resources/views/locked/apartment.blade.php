@@ -11,51 +11,35 @@
 
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<a href='{{URL::to("house")}}/{{$apartment->house->id}}' class="btn btn-success col-md-12">{{Lang::get('app.appartment_back_btn')}}</a>
+					<a href='{{URL::to("house")}}/{{$apartment->house->id}}' class="btn btn-success col-md-12">Tagasi maja lehele</a>
 				</div>
 			</div>
 
 			<div class="panel panel-default">
-				<div class="panel-heading">{{Lang::get('app.appartment_info')}}</div>
+				<div class="panel-heading">Korteri info</div>
 				<div class="panel-body">
-					<strong>{{Lang::get('app.apartment_house_address')}}</strong> {{$apartment->house->address}} <br/>
-					<strong>{{Lang::get('app.apartment_apartment_number')}}</strong> {{$apartment->apartment_number}} <br/>
-					<strong>{{Lang::get('app.apartment_apartment_token')}}</strong> {{$apartment->token}} <br/><br/>
+					<strong>Aadress:</strong> {{$apartment->house->address}} <br/>
+					<strong>Korteri number:</strong> {{$apartment->apartment_number}} <br/>
+					<strong>Korteri kood:</strong> {{$apartment->token}} <br/><br/>
 
 					<form action='/house/{{$apartment->house->id}}/apartment/{{$apartment->id}}' method="POST" class="form">
 						<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 						<input type="hidden" name="_method" value="PATCH">
 						<div class="form-group">
-							<label for="exampleInputPassword1">{{Lang::get('app.appartment_number')}}</label>
-							<input type="text" name="apartment_number" class="form-control" value="{{$apartment->apartment_number}}" id="exampleInputEmail1" placeholder="{{Lang::get('app.appartment_info')}}">
+							<label for="exampleInputPassword1">Korteri number:</label>
+							<input type="text" name="apartment_number" class="form-control" value="{{$apartment->apartment_number}}" id="exampleInputEmail1" placeholder="Korteri info">
 						</div>
-						<button type="submit" class="btn btn-success">{{Lang::get('app.appartment_info_btn')}}</button>
+						<button type="submit" class="btn btn-success">Salvesta</button>
 					</form>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="col-md-9">
 			<div class="panel panel-default">
-				<div class="panel-heading">{{Lang::get('app.apartment_readings_headline')}}</div>
-				@if(date('j') >= $apartment->house->days_after AND date('j') <= (date('t') - $apartment->house->days_before))
+				<div class="panel-heading">Näitude esitamine</div>
+				@if(isset($the_reading->id))
 					<div class="panel-body">
-						<h4>{{Lang::get('app.apartment_readings_not_now', array('days_before' => $apartment->house->days_before,'days_after' => $apartment->house->days_after))}}</h4>
-					</div>
-				@elseif(isset($the_reading->id))
-					<div class="panel-body">
-						<h4>{{Lang::get('app.apartment_readings_done')}}</h4>
+						<h4>Näidud on esitatud.</h4>
 					</div>
 				@else
 					<div class="panel-body">
@@ -81,18 +65,6 @@
 										<input type="text" name="gas" class="form-control" id="gasLable" placeholder="{{Lang::get('app.apartment_readings_gas')}}">
 									</div>
 								@endif
-								@if($apartment->house->has_day_electricity)
-									<div class="form-group col-md-3">
-										<label for="dayElectricityLable">{{Lang::get('app.apartment_readings_day_electricity')}}</label>
-										<input type="text" name="day_electricity" class="form-control" id="dayElectricityLable" placeholder="{{Lang::get('app.apartment_readings_day_electricity')}}">
-									</div>
-								@endif
-								@if($apartment->house->has_night_electricity)
-									<div class="form-group col-md-3">
-										<label for="nightElectricityLable">{{Lang::get('app.apartment_readings_night_electricity')}}</label>
-										<input type="text" name="night_electricity" class="form-control" id="nightElectricityLable" placeholder="{{Lang::get('app.apartment_readings_night_electricity')}}">
-									</div>
-								@endif
 							</div>
 							<div class="row">
 								<div class="col-md-3">
@@ -103,11 +75,8 @@
 					</div>
 				@endif
 			</div>
-
-
 			<div class="panel panel-default">
 				<div class="panel-heading">{{Lang::get('app.apartment_history_headline')}}</div>
-
 				<div class="panel-body">
 					<table class="table">
 		               <thead>
@@ -123,14 +92,6 @@
 								@if($apartment->house->has_gas)
 			                       <th>{{Lang::get('app.apartment_readings_gas')}}</th>
 								@endif
-								@if($apartment->house->has_day_electricity)
-			                       <th>{{Lang::get('app.apartment_readings_day_electricity')}}</th>
-								@endif
-								@if($apartment->house->has_night_electricity)
-			                       <th>{{Lang::get('app.apartment_readings_night_electricity')}}</th>
-								@endif
-			                       <th>{{Lang::get('app.appartment_reading_edit_btn')}}</th>
-
 		                    </tr>
 		               </thead>
 		               <tbody>
@@ -150,12 +111,6 @@
 										@if($apartment->house->has_gas)
 					                       <td><input type="text" name="gas" class="form-control" id="gasLable" value="{{$reading->gas}}" placeholder="Gaasi näit"></td>
 										@endif
-										@if($apartment->house->has_day_electricity)
-					                       <td><input type="text" name="day_electricity" class="form-control" id="dayElectricityLable" value="{{$reading->day_electricity}}" placeholder="Päevase elektri näit"></td>
-										@endif
-										@if($apartment->house->has_night_electricity)
-					                       <td><input type="text" name="night_electricity" class="form-control" id="nightElectricityLable" value="{{$reading->night_electricity}}" placeholder="Öise elektri näit"></td>
-					                    @endif
 					                       <td><button type="submit" class="btn btn-success">{{Lang::get('app.appartment_reading_edit_btn')}}</button></td>
 				                   	</tr>
 			                   </form>
@@ -168,7 +123,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 @endsection

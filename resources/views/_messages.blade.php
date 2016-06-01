@@ -3,8 +3,8 @@
     <div class="alert alert-success alert-dismissible fade in" role="alert">
         <div class="icon"><span class="fa fa-check-circle"></span></div>
         <button type="button" class="close" data-dismiss="alert">
-			<span aria-hidden="true">&times; &nbsp&nbsp&nbsp&nbsp</span>
-			<span class="sr-only">{{Lang::get('app.messages_close')}}</span>
+			<span aria-hidden="true">&times;</span>
+			<span class="sr-only">Sulge</span>
 		</button>
 		{{Session::get('success_message')}}
     </div>
@@ -13,8 +13,8 @@
         <div class="alert alert-danger alert-dismissible fade in" role="alert">
             <div class="icon"><span class="fa fa-ban"></span></div>
             <button type="button" class="close" data-dismiss="alert">
-				<span aria-hidden="true">&times; &nbsp&nbsp&nbsp&nbsp</span>
-				<span class="sr-only">{{Lang::get('app.messages_close')}}</span></button>
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Sulge</span></button>
 		{{Session::get('fail_message')}}
         </div>
 	@endif
@@ -24,8 +24,8 @@
         <div class="alert alert-danger alert-dismissible fade in" role="alert">
             <div class="icon"><span class="fa fa-ban"></span></div>
             <button type="button" class="close" data-dismiss="alert">
-				<span aria-hidden="true">&times; &nbsp&nbsp&nbsp&nbsp</span>
-				<span class="sr-only">{{Lang::get('app.messages_close')}}</span></button>
+				<span aria-hidden="true">&times;</span>
+				<span class="sr-only">Sulge</span></button>
      		{{$message}}
         </div>
 		@endforeach

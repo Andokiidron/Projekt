@@ -11,30 +11,29 @@
 							<input type="hidden" name="_method" value="PATCH">
 							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 							<div class="form-group">
-								<label for="exampleInputEmail1">{{Lang::get('app.account_name')}}</label>
-								<input type="text" name="name" class="form-control" value="{{Auth::user()->name}}" placeholder="{{Lang::get('app.account_name')}}">
+								<label for="exampleInputEmail1">Nimi</label>
+								<input type="text" name="name" class="form-control" value="{{Auth::user()->name}}" placeholder="Nimi">
 							</div>
 							<div class="form-group">
-								<label for="exampleInputEmail1">{{Lang::get('app.account_email')}}</label>
-								<input type="email" name="email" class="form-control" value="{{Auth::user()->email}}" placeholder="{{Lang::get('app.account_email')}}">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" name="email" class="form-control" value="{{Auth::user()->email}}" placeholder="Email">
 							</div>
 							<br/>
-							<label for="exampleInputPassword1">{{Lang::get('app.account_password_info')}}</label>
+							<label for="exampleInputPassword1">Täida ainult, kui soovid parooli vahetada.</label>
 							<br/>
 							<div class="form-group">
-								<label for="exampleInputPassword1">{{Lang::get('app.account_password')}}</label>
-								<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="{{Lang::get('app.account_password')}}">
+								<label for="exampleInputPassword1">Salasõna</label>
+								<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Salasõna">
 							</div>
 							<div class="form-group">
-								<label for="exampleInputPassword1">{{Lang::get('app.account_password_2')}}</label>
-								<input type="password" name="password2" class="form-control" id="exampleInputPassword1" placeholder="{{Lang::get('app.account_password_2')}}">
+								<label for="exampleInputPassword1">Salasõna kordus</label>
+								<input type="password" name="password2" class="form-control" id="exampleInputPassword1" placeholder="Salasõna kordus">
 							</div>
-							<button type="submit" class="btn btn-success">{{Lang::get('app.account_btn')}}</button>
+							<button type="submit" class="btn btn-success">Salvesta</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-   
 @endsection

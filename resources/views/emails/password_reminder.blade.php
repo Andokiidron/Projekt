@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 	
-    <title>{{Lang::get('app.email_password_reminder_title')}}</title><!-- Responsive Styles and Valid Styles -->
+    <title>Parooli meeldetuletus</title><!-- Responsive Styles and Valid Styles -->
 
     <style type="text/css">
     
@@ -96,36 +96,22 @@
 </head>
 
 <body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	
-	<!-- ======= main section ======= -->
 	<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="eeeeee">
-		
 		<tr><td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td></tr>
-		
 		<tr>
-			<!-- ======= logo ======= -->
 			<td align="center">
 				<a href="{{URL::to('/')}}" style="display: block; border-style: none !important; border: 0 !important;"><img width="200" border="0" style="display: block; width: 200px;" src="{{URL::to('/')}}/img/logo.png" alt="logo" /></a>
 			</td>			
 		</tr>
-		
 		<tr><td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td></tr>
-		
 		<tr>
 			<td>
 				<table border="0" align="center" width="510" cellpadding="0" cellspacing="0" bgcolor="ffffff" class="container590 bodybg_color" style="border-radius: 3px;">
-					
 					<tr><td height="60" style="font-size: 60px; line-height: 60px;">&nbsp;</td></tr>
-					
 					<tr>
 						<td align="center" style="color: #29353b; font-size: 24px; font-family: 'Open Sans', sans-serif; mso-line-height-rule: exactly; line-height: 30px;" class="title_color main-header">
-							
-							<!-- ======= section header ======= -->
-							
 							<div style="line-height: 30px;">
-	        					
-	        						{{Lang::get('app.email_password_reminder_slogan')}}
-	        					
+	        						Loo uus parool
 							</div>
         				</td>
 					</tr>
@@ -138,73 +124,48 @@
 								<tr>
 									<td align="center" style="color: #727e84; font-size: 14px; font-family: 'Open Sans', sans-serif; mso-line-height-rule: exactly; line-height: 24px;" class="resize-text text_color">
 										<div style="line-height: 24px">
-											
-											<!-- ======= section text ======= -->
-											
-				        					
-				        						{{Lang::get('app.email_password_reminder_text')}}
-				        					
+											Parooli vahetamiseks klikka all olevale nupule ja trüki uus meelepärane parool. PS! See link on aktiivne 60 minutit.
 										</div>
 			        				</td>	
 								</tr>
 							</table>
 						</td>
 					</tr>
-					
 					<tr><td height="35" style="font-size: 35px; line-height: 35px;">&nbsp;</td></tr>
-					
 					<tr>
 						<td align="center">
-							
 							<table border="0" align="center" width="220" cellpadding="0" cellspacing="0" bgcolor="3498db" style="border-radius: 3px;" class="cta-button main_color">
-								
 								<tr><td height="17" style="font-size: 17px; line-height: 17px;">&nbsp;</td></tr>
-								
 								<tr>
-									
-	                				<td align="center" style="color: #3498db; font-size: 16px; font-family: 'Open Sans', sans-serif;" class="cta-text">
-	                					<!-- ======= main section button ======= -->
-	                					
+	                				<td align="center" style="color: #3498db; font-size: 16px; font-family: 'Open Sans', sans-serif;" class="cta-text">	                					
 		                    			<div style="line-height: 24px;">
-			                    			<a href="{{URL::to('password')}}/{{$token}}" style="color: #ffffff; text-decoration: none;">{{Lang::get('app.email_password_reminder_btn')}}</a> 
+			                    			<a href="{{URL::to('password')}}/{{$token}}" style="color: #ffffff; text-decoration: none;">Loo uus parool</a> 
 		                    			</div>
 		                    		</td>
-		                    		
 	                			</tr>
-								
 								<tr><td height="17" style="font-size: 17px; line-height: 17px;">&nbsp;</td></tr>
-							
 							</table>
 						</td>
 					</tr>
-					
-					<tr><td height="50" style="font-size: 50px; line-height: 50px;">&nbsp;</td></tr>
-												
+					<tr><td height="50" style="font-size: 50px; line-height: 50px;">&nbsp;</td></tr>						
 				</table>
 			</td>
 		</tr>
-		
 		<tr><td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td></tr>
-		
 		<tr>
 			<td>
 				<table border="0" align="center" width="510" cellpadding="0" cellspacing="0" class="container590 bodybg_color">
 					<tr>
 						<td>	                		
 			        		<table border="0" align="left" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="container590">
-			
 			        			<tr>
 			        				<td align="center" class="copyright" style="color: #8e8e8e; font-size: 14px; font-family: 'Open Sans', sans-serif; line-height: 22px;">
 			        					<div style=" line-height: 22px;">
-			            					
-			            						{!! Lang::get('app.email_password_reminder_footer')!!}
-			            					
+			            					Kõik õigused kaitstud.
 			        					</div>	
 			        				</td>
 			        			</tr>
-			        			
 			    			</table>
-			    			
 			    			<table border="0" align="left" width="5" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="container590">
 			        			<tr><td height="20" width="5" style="font-size: 20px; line-height: 20px;">&nbsp;</td></tr>
 			        		</table>
@@ -213,12 +174,7 @@
 				</table>
 			</td>
 		</tr>		
-		
 		<tr><td height="50" style="font-size: 50px; line-height: 50px;">&nbsp;</td></tr>
-		
 	</table>
-	<!-- ======= end header ======= -->
-	
-	
 </body>
 </html>

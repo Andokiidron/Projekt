@@ -21,12 +21,9 @@ class ApartmentController extends Controller {
 	public function postSearch(Requests\PostSearchRequest $request)
 	{
 		$apartment = Apartment::where(DB::raw('BINARY `token`'), $request->input('search'))->first();
-
+        
 		return redirect("apartment/$apartment->token");
 	}
-
-
-
 	
 	public function getApartment($apartment_token)
 	{
@@ -34,9 +31,6 @@ class ApartmentController extends Controller {
 
 		return view('public.apartment')->with('apartment',$apartment);
 	}
-
-
-
 	
 	public function postReading($apartment_token, Requests\PostReadingRequest $request)
 	{
