@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('content')
-
+@if(Session::has('search_faild'))
+		<script> alert('Sellist korterit andmebaasist ei leitud!'); </script>
+	@endif
 
 	<div id="headerwrap">
 		<div class="container">

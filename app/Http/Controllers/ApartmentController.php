@@ -21,7 +21,12 @@ class ApartmentController extends Controller {
 	public function postSearch(Requests\PostSearchRequest $request)
 	{
 		$apartment = Apartment::where(DB::raw('BINARY `token`'), $request->input('search'))->first();
-        
+		
+		if(!isset($apartment->id))
+		{
+			Session::flash('search_faild', true);
+			return back();
+		}
 		return redirect("apartment/$apartment->token");
 	}
 	
