@@ -1,3 +1,29 @@
+VR I Ando Kodutöö
+
+Kodutöö koostamiseks on kasutatud Laravel frameworki ja Bootstrapi. 
+
+Kohad kuhu pilk peale visata: 
+.app Apartment.php
+.app House.php
+.app/Http/Controllers
+.app/Http/Middleware
+.app/Http/Requests
+.app Routes.php
+.app Reading.php
+.app Reminder.php
+.app User.php
+.app User House.php
+.database
+.database/migrations     
+.public/css
+.public/fonts
+.public/img
+.resources
+
+
+
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
